@@ -1,11 +1,11 @@
-//function declarations- can be used before declaration
- function myAge(birthYear) {
-    return 2023- birthYear
-}
-console.log(myAge(1997));
+// //function declarations- can be used before declaration
+//  function myAge(birthYear) {
+//     return 2023- birthYear
+// }
+// console.log(myAge(1997));
 
 
-//function expressions- a function value stored in a variable
+// //function expressions- a function value stored in a variable
 const newFunc = function (birthYear) {
     return 2023 - birthYear
 };
@@ -235,3 +235,57 @@ const calcAverage = function (arr) {
 }
 console.log(calcAverage([2,3,7]))
 console.log(calcAverage(totals))
+
+
+let arr = [2,3,54,787,4,1];
+let a = [];
+for (let i = 0; i< arr.length; i++){
+if(arr[i] % 2 !== 0) a.push(arr[i]);
+}
+console.log(a)
+
+//polindrome
+function word(str) {
+  str = str.toLowerCase();
+  return str == str.split.('').reverse().join('');
+}
+console.log(word('asa asa'))
+
+//fibonacci
+  function index(num){
+ if(num < 2){
+ return num;
+ }
+ return index(num-	1) + index(num-2)
+ }
+
+ console.log(index(4))
+
+function fibonacci(num) {
+ let result = [ 0, 1 ];
+ for(let i=2; i<=num; i++){
+  let prevNum1 = result[i-1]; //3 2
+  let prevNum2 = result[i-2]; //2 1
+  result.push( prevNum1 + prevNum2); //5
+
+ }
+ return result[num];
+}
+console.log(fibonacci())
+function fizzbuzz(n) {
+ for (let i = 1; i <= n; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+   console.log('fizzbuzz')
+  }
+  else if (i % 3 === 0) {
+   console.log('fizz')
+  }
+  else if (i % 5 === 0) {
+   console.log('buzz')
+  }
+  else {
+   console.log(i)
+  }
+ }
+}
+fizzbuzz(20)
